@@ -1,5 +1,15 @@
 # Gradle
 
+... EN DESARROLLO ...
+
+<!-- markdownlint-disable MD033 -->
+<p align="center">
+  <a href="https://alxgcrz.com" target="_blank">
+    <img src="https://alxgcrz.com/assets/asset_06_v1.png" alt="En desarrollo" title="En desarrollo" width="40%">
+  </a>
+</p>
+<!-- markdownlint-enable MD033 -->
+
 ## Introducción
 
 Gradle automatiza la construcción, prueba y implementación de software a partir de información en scripts de construcción.
