@@ -1,6 +1,6 @@
 # Gradle
 
-... EN DESARROLLO ...
+> :warning: **DOCUMENTO EN DESARROLLO** :warning:
 
 ## Introducción
 
@@ -46,7 +46,7 @@ Por defecto, el directorio raíz del usuario se encuentra en '~/.gradle o C:\\Us
 
 Se puede establecer con la variable de entorno **GRADLE_USER_HOME**.
 
-[Para más información](https://docs.gradle.org/current/userguide/installation.html)
+- [Más información](https://docs.gradle.org/current/userguide/installation.html)
 
 ## Inicialización de un proyecto
 
@@ -78,7 +78,7 @@ Hay varias opciones de línea de comandos disponibles para la tarea de inicializ
 gradle help --task init
 ```
 
-Esta tarea sirve para diferentes tipos de compilación de proyectos. Estos se enumeran a continuación:
+Esta tarea sirve para diferentes [tipos de compilación de proyectos](https://docs.gradle.org/current/userguide/build_init_plugin.html). Estos se enumeran a continuación:
 
 - [pom](https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:pom_maven_conversion) - Converts an existing Apache Maven build to Gradle
 - [basic](https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:basic) - A basic, empty, Gradle build
@@ -95,8 +95,6 @@ Esta tarea sirve para diferentes tipos de compilación de proyectos. Estos se en
 - [scala-library](https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:scala_library) - A Scala library
 - [cpp-application](https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:cpp_application) - A command-line application implemented in C++
 - [cpp-library](https://docs.gradle.org/current/userguide/build_init_plugin.html#sec:cpp_library) - A C++ library
-
-[Más información](https://docs.gradle.org/current/userguide/build_init_plugin.html)
 
 ## Gestión de proyectos múltiples
 
@@ -116,11 +114,11 @@ Una forma es invocar las tareas por su **nombre simple**. Si estamos en el direc
 
 Otra forma es invocar las tareas por su **nombre calificado** o _qualified name_. Este nombre se compone de `:{subproyecto}:{tarea}`.
 
-:warning: El primer `:` no es un separador com tal sino que se corresponde con el nombre del proyecto raíz.
+> :warning: El primer `':'` no es un separador com tal sino que se corresponde con el **nombre del proyecto raíz**.
 
 En proyectos que se componen de varios subproyectos, es normal que alguno de los subproyectos tenga una dependencia con otro de los subproyectos.
 
-Para construir un proyecto con subproyectos tenemos varias tareas:
+Para construir un [proyecto con subproyectos](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html) tenemos varias tareas:
 
 ```sh
 # La tarea 'build' compila, prueba y valida un único proyecto
@@ -132,8 +130,6 @@ $ gradle :subproject:buildDependents
 # Ensambla y prueba este proyecto y todos los proyectos de los que depende.
 $ gradle :subproject:buildNeeded
 ```
-
-[Más información](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html)
 
 ## Ciclo de vida de construcción
 
@@ -161,7 +157,7 @@ include('sub-project-b')
 include('sub-project-c')
 ```
 
-[Más información](https://docs.gradle.org/current/userguide/writing_settings_files.html)
+- [Más información](https://docs.gradle.org/current/userguide/writing_settings_files.html)
 
 ## Fichero de construcción
 
@@ -199,7 +195,7 @@ gradle wrapper
 
 Esta tarea genera una carpeta con los ficheros `gradle-wrapper.jar` y `gradle-wrapper.properties`. El fichero de propiedades contendrá la URL de la versión de Gradle en uso, además de otra información.
 
-:warning: NOTA: es recomendable añadir estos ficheros al control de versiones para compartirlos con el resto de desarrolladores del proyecto.
+> :warning: Es recomendable añadir estos ficheros al **control de versiones** para compartirlos con el resto de desarrolladores del proyecto.
 
 ### Upgrading the Gradle Wrapper
 
@@ -216,7 +212,7 @@ $ ./gradlew wrapper --gradle-version 8.4
 $ ./gradlew --version
 ```
 
-[Más información](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
+- [Más información](https://docs.gradle.org/current/userguide/gradle_wrapper.html)
 
 ## Command-Line Interface Reference
 
@@ -224,15 +220,15 @@ La interfaz de línea de comandos es el método principal de interactuar con Gra
 
 Se recomienda el uso del **Wrapper** de Gradle por las ventajas que aporta haciendo uso de `./gradlew` en Linux/macOS o `gradlew.bat` en Windows dentro de la raíz del proyecto. Sin embargo, podemos usar la versión de Gradle instalada en el sistema desde cualquier ubicación con:
 
-> gradle [taskName...] [--option-name...]
+- `gradle [taskName...] [--option-name...]`
 
 Las opciones se permiten tanto delante como detrás de la tarea:
 
-> gradle [--option-name...] [taskName...]
+- `gradle [--option-name...] [taskName...]`
 
 En el caso de especificar múltiples tareas, se deben separar con un espacio:
 
-> gradle [taskName1 taskName2...] [--option-name...]
+- `gradle [taskName1 taskName2...] [--option-name...]`
 
 Ejemplos de comandos:
 
@@ -255,7 +251,7 @@ $ gradle tasks --all # normal
 $ ./gradlew tasks --all # usando el wrapper
 ```
 
-[Más información](https://docs.gradle.org/8.5/userguide/command_line_interface.html)
+- [Más información](https://docs.gradle.org/8.5/userguide/command_line_interface.html)
 
 ---
 
